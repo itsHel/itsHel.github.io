@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>itsHel - Guidepost</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="./favicon.webp" />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="google-site-verification" content="034t3S4O7oLWmuxt4D19e5igyzjETLa3-ZdodipwZMg" />
+
+        <style>
+            :root {
+                --li-background: #e9e9e9;
+                --description-color: #222222;
+                --opacity-change: 0;
+            }
+
+            body {
+                font-family: "Roboto", sans-serif;
+                margin: 0;
+                background: #555555;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                position: relative;
+            }
+            main {
+                width: 100%;
+            }
+            canvas {
+                overflow: hidden;
+                position: absolute;
+            }
+            #particles-js {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+            #link-list {
+                margin: 40px auto;
+                margin: 0;
+                padding: 0;
+            }
+            #link-list ul {
+                padding: 0;
+            }
+            #link-list li {
+                list-style-type: none;
+                background: var(--li-background);
+                opacity: var(--opacity-change);
+                transition: background 0.75s, opacity 0.75s;
+                padding: 20px;
+                margin: 30px auto;
+                border-radius: 8px;
+                max-width: max(560px, 70%);
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                position: relative;
+                z-index: 1;
+            }
+            #link-list a {
+                display: inline-flex;
+                width: fit-content;
+                font-size: 22px;
+                color: crimson;
+                text-decoration: none;
+            }
+            #link-list a:hover {
+                text-decoration: underline;
+            }
+            #link-list .description {
+                font-size: 18px;
+                color: var(--description-color);
+                transition: color 1s;
+                line-height: 26px;
+            }
+            #link-list .type {
+                margin-top: -14px;
+                color: #808080;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script src="js/particles.min.js"></script>
+        <script src="js/index.js"></script>
+
+        <main>
+            <div id="wrapper">
+                <ul id="link-list">
+                    <li>
+                        <a class="link" href="/Alpha-convert">Alpha Convert</a>
+                        <div class="type">React/Typescript</div>
+                        <div class="description">
+                            Merge overlapping alpha color(s) with background or just overlapping alpha colors together
+                            <i>(hex/rgb)</i>.
+                        </div>
+                    </li>
+                    <li>
+                        <a class="link" href="/Shift-Subtitles">Shift Subtitles</a>
+                        <div class="type">React/Typescript/Nodejs</div>
+                        <div class="description">Change timing on your subtitles and share them with others.</div>
+                    </li>
+                    <li>
+                        <a class="link" href="/Snake">Snake</a>
+                        <div class="type">React/Redux/Typescript</div>
+                        <div class="description">Snake game, gets faster as you progress.</div>
+                    </li>
+                    <li>
+                        <a class="link" href="/Skyrim-Dead-is-Dead-Map-simple">Skyrim Dead is Dead Map</a>
+                        <div class="type">Javascript</div>
+                        <div class="description">Mark your Skyrim deaths on a map, made for permadeath players.</div>
+                    </li>
+                    <li>
+                        <a class="link" href="/Skyrim-Character-Generator">Skyrim Character Generator</a>
+                        <div class="type">Javascript/PWA</div>
+                        <div class="description">Very simple Skyrim random character generator.</div>
+                    </li>
+                    <div id="particles-js"></div>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>
