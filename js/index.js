@@ -4,7 +4,12 @@ window.onload = function () {
     if (window.matchMedia("(prefers-color-scheme: dark)")?.matches) {
         root.style.setProperty("--li-background", "#111111");
         root.style.setProperty("--description-color", "#cccccc");
-        root.style.setProperty("--opacity-change", "1");
+    }
+
+    root.style.setProperty("--opacity-change", "1");
+
+    if (navigator.maxTouchPoints > 0) {
+        return;
     }
 
     particlesJS("particles-js", {
