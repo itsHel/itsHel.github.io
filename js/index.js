@@ -22,6 +22,7 @@ window.onload = function () {
 
     function isNotComputer() {
         const phones = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+
         return navigator.maxTouchPoints > 0 || navigator.userAgent.match(phones);
     }
 
