@@ -8,11 +8,24 @@ window.onload = function () {
 
     root.style.setProperty("--opacity-change", "1");
 
-    if (navigator.maxTouchPoints > 0) {
+    if (isNotComputer()) {
         return;
+    } else {
+        const particleScript = document.createElement("script");
+        particleScript.src = "js/particles.min.js";
+        particleScript.onload = function () {
+            particlesJS("particles-js", particlesJSOptions);
+        };
+
+        document.body.insertAdjacentElement("beforeend", particleScript);
     }
 
-    particlesJS("particles-js", {
+    function isNotComputer() {
+        const phones = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return navigator.maxTouchPoints > 0 || navigator.userAgent.match(phones);
+    }
+
+    const particlesJSOptions = {
         particles: {
             number: {
                 value: 100,
@@ -127,5 +140,5 @@ window.onload = function () {
             background_repeat: "no-repeat",
             background_size: "cover",
         },
-    });
+    };
 };
