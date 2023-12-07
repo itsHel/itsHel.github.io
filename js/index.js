@@ -4,6 +4,8 @@ window.onload = function () {
     if (window.matchMedia("(prefers-color-scheme: dark)")?.matches) {
         root.style.setProperty("--li-background", "#111111");
         root.style.setProperty("--description-color", "#cccccc");
+    } else {
+        root.style.setProperty("--li-background", "#e9e9e9");
     }
 
     root.style.setProperty("--opacity-change", "1");
