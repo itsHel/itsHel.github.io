@@ -31,7 +31,7 @@ window.onload = function () {
     const particlesJSOptions = {
         particles: {
             number: {
-                value: 100,
+                value: 120,
                 density: {
                     enable: true,
                     value_area: 800,
@@ -49,11 +49,6 @@ window.onload = function () {
                 polygon: {
                     nb_sides: 5,
                 },
-                image: {
-                    src: "img/github.svg",
-                    width: 100,
-                    height: 100,
-                },
             },
             opacity: {
                 value: 0.75,
@@ -66,7 +61,7 @@ window.onload = function () {
                 },
             },
             size: {
-                value: 5,
+                value: 4,
                 random: true,
                 anim: {
                     enable: false,
@@ -84,7 +79,7 @@ window.onload = function () {
             },
             move: {
                 enable: true,
-                speed: 3,
+                speed: 2,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -101,13 +96,13 @@ window.onload = function () {
             events: {
                 onhover: {
                     enable: true,
-                    mode: "repulse",
+                    mode: "grab",
                 },
                 onclick: {
                     enable: true,
                     mode: "push",
                 },
-                resize: true,
+                resize: false,
             },
             modes: {
                 grab: {
